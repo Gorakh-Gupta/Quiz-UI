@@ -1,2 +1,2 @@
-# New React Project for Quiz in 
+# New React Project for Quiz in React
 * using reaact framework
