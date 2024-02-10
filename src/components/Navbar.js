@@ -26,9 +26,9 @@ export const Navbar = () => {
             QuizApp
           </Typography>
           <Stack direction='row' spacing={2}>
-            <Button color='inherit'>Login</Button>
-            <Button color='inherit'>Signup</Button>
-            <Button color='inherit'>About</Button>
+          <Button color='inherit' href="login">Login</Button>
+            <Button color='inherit' href="/signup">SignUp</Button>
+            <Button color='inherit' href='/about'>About</Button>
             <Button color='inherit' id='admin-button' onClick={handlerClick} aria-controls={open ? 'admin-menu' : undefined}
               aria-haspopup='true'
               aria-expanded={open ? 'true' : undefined}
@@ -50,8 +50,8 @@ export const Navbar = () => {
               vertical: 'top',
               horizontal: 'right',
             }}>
-            <MenuItem onClick={handleClose}>Signup</MenuItem>
-            <MenuItem onClick={handleClose}> SignIn</MenuItem>
+            <MenuItem onClick={handleClose} href="/admin/signup">Signup</MenuItem>
+            <MenuItem onClick={handleClose} href="/admin/login"> SignIn</MenuItem>
           </Menu>
         </Toolbar>
 
