@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { AppBar, Button, IconButton, Menu, MenuItem, Stack, Toolbar, Typography } from '@mui/material'
 // import { CatchingPokemon } from '@mui/icons-material'
 import Icon from '@mui/material/Icon';
@@ -26,9 +27,9 @@ export const Navbar = () => {
             QuizApp
           </Typography>
           <Stack direction='row' spacing={2}>
-          <Button color='inherit' href="login">Login</Button>
+            <Button color='inherit' href="login">Login</Button>
             <Button color='inherit' href="/signup">SignUp</Button>
-            <Button color='inherit' href='/about'>About</Button>
+            <Button color='inherit' href='/about'>Get Started</Button>
             <Button color='inherit' id='admin-button' onClick={handlerClick} aria-controls={open ? 'admin-menu' : undefined}
               aria-haspopup='true'
               aria-expanded={open ? 'true' : undefined}
@@ -50,13 +51,13 @@ export const Navbar = () => {
               vertical: 'top',
               horizontal: 'right',
             }}>
-            <MenuItem onClick={handleClose} href="/admin/signup">Signup</MenuItem>
-            <MenuItem onClick={handleClose} href="/admin/login"> SignIn</MenuItem>
+            <MenuItem ><Link style={{ textDecoration: 'none', color: 'inherit' }} to="/admin/signup">Signup</Link></MenuItem>
+            <MenuItem > <Link style={{ textDecoration: 'none', color: 'inherit' }} to="/admin/login">Login</Link></MenuItem>
           </Menu>
         </Toolbar>
 
       </AppBar>
-      <img style={{ height: '89vh' ,width: "100%" } } src='quiz-page-cover.png' />
+      <img style={{ height: '89vh', width: "100%" }} src='quiz-page-cover.png' />
     </>
   )
 }
