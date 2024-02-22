@@ -5,14 +5,14 @@ import { Mui } from './components/Mui'
 import { SignUp } from './components/SignUp'
 import { Login } from './components/Login'
 import { Quiz } from './components/Quiz'
-
+import { Home } from './components/Home'
+import { Question } from './components/Question'
 
 function RouterPath() {
     return (
         <div>
             <Router>
                 <Routes>
-                    
                     <Route path="/" exact element={<Navbar />} />
                     //user
                     <Route path="/signup"  element={<SignUp />} />
@@ -23,10 +23,10 @@ function RouterPath() {
                     <Route path="/admin/signup"  exact element={<SignUp />} />
                     <Route path="/admin/login" exact element={<Login />} />
 
-
                     //quiz
                     <Route path="/createquiz"  exact element={<Quiz />} />
-                    
+                    <Route path="/home"  exact element={<Home />} />
+                    <Route path="/fetchquestion"  exact element={<Question />} />
                 </Routes>
             </Router>
         </div>
